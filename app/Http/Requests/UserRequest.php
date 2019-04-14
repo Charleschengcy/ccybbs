@@ -29,12 +29,14 @@ class UserRequest extends FormRequest
             'name' => 'required|between:3,25|regex:/^[A-Za-z0-9\-\_]+$/|unique:users,name,'.Auth::id(),
             'email' => 'required|email',
             'introduction' => 'max:80',
+            'avatar' => 'mimes:jpeg,bmp,png,gif|dimensions:min_width=208,min_height=208',
         ];
     }
 
     public function messages()
     {
         return [
+            'avatar.dimensions' => 'The avatar has invalid image dimensions,width and height require 208px or more.'
             // 'name.unique' => 'Username has been used.',
             // 'name.regex' => 'Username can only contain letters, numbers, crossbars and underscores.',
             // 'name.between' => 'Username must be between 3 and 25 characters。',
