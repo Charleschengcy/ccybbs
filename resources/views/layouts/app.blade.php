@@ -11,6 +11,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>@yield('title', 'CcyBBS') - Laravel Program</title>
+  <meta name="description" content="@yield('description', 'CcyBBS')" />
 
   <!-- Styles -->
 <!--   会根据 webpack.mix.js 的逻辑来生成 CSS 文件链接 -->
