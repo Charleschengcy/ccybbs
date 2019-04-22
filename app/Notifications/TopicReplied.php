@@ -59,6 +59,15 @@ class TopicReplied extends Notification
         ];
     }
 
+    // public function toMail($notifiable)
+    // {
+    //     $url = $this->reply->topic->link(['#reply' . $this->reply->id]);
+
+    //     return (new MailMessage)
+    //                 ->line('There is a new reply to your topic!')
+    //                 ->action('View reply', $url);
+    // }
+
     /**
      * Get the array representation of the notification.
      *
