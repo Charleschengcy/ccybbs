@@ -10,8 +10,9 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>@yield('title', 'CcyBBS') - Laravel Program</title>
-  <meta name="description" content="@yield('description', 'CcyBBS')" />
+  <title>@yield('title', 'CcyBBS') - {{ setting('site_name', 'Laravel Project') }}</title>
+  <meta name="description" content="@yield('description', setting('seo_description', 'CcyBBS'))" />
+   <meta name="keyword" content="@yield('keyword', setting('seo_keyword', 'CcyBBS'))" />
 
   <!-- Styles -->
 <!--   会根据 webpack.mix.js 的逻辑来生成 CSS 文件链接 -->
